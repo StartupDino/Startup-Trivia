@@ -32,6 +32,9 @@
                                 <rect key="frame" x="16" y="212" width="343" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Answer Button 1"/>
+                                <connections>
+                                    <action selector="answerButtonOne" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIQ-dm-xiq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ9-GC-MVD">
                                 <rect key="frame" x="16" y="303" width="343" height="60"/>
@@ -56,6 +59,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="answerButtonFour" destination="THu-Yg-ISw" id="X4f-42-Z2D"/>
+                        <outlet property="answerButtonOne" destination="W8b-FW-B9v" id="1LR-6C-evT"/>
+                        <outlet property="answerButtonThree" destination="RAm-3b-2GF" id="V9m-Sa-hcx"/>
+                        <outlet property="answerButtonTwo" destination="ZQ9-GC-MVD" id="j4S-2k-GP2"/>
+                        <outlet property="playAgainButton" destination="VHY-mE-pt4" id="ina-pw-JYX"/>
+                        <outlet property="questionArea" destination="9TS-Zs-DGx" id="Nue-hg-nfA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

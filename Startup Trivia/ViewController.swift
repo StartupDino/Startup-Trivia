@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    // buttons!
+   
+    @IBOutlet weak var questionArea: UILabel!
+    @IBOutlet weak var answerButtonOne: UIButton!
+    @IBOutlet weak var answerButtonTwo: UIButton!
+    @IBOutlet weak var answerButtonThree: UIButton!
+    @IBOutlet weak var answerButtonFour: UIButton!
+    @IBOutlet weak var playAgainButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
