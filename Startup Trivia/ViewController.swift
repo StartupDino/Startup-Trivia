@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         primeTheApp()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +40,8 @@ class ViewController: UIViewController {
         answerButtonFour.isHidden = true
         questionArea.text = "Are you a triviapreneur? Time to find out."
     }
+    
+    
 
     @IBAction func startRound() {
         answerButtonOne.isHidden = false
@@ -48,6 +49,9 @@ class ViewController: UIViewController {
         answerButtonThree.isHidden = false
         answerButtonFour.isHidden = false
         playAgainButton.isHidden = true
+        
+        generateRoundQuestions() // gotta change this!
+        
         
     }
 
