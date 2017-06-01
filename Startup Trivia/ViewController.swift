@@ -23,13 +23,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        primeTheApp()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // sets up the welcome screen
+    
+    func primeTheApp() {
+        answerButtonOne.isHidden = true
+        answerButtonTwo.isHidden = true
+        answerButtonThree.isHidden = true
+        answerButtonFour.isHidden = true
+        questionArea.text = "Are you a triviapreneur? Time to find out."
+    }
 
+    @IBAction func startRound() {
+        answerButtonOne.isHidden = false
+        answerButtonTwo.isHidden = false
+        answerButtonThree.isHidden = false
+        answerButtonFour.isHidden = false
+        playAgainButton.isHidden = true
+        
+    }
 
 }
 
