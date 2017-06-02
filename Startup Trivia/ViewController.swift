@@ -12,6 +12,15 @@ import GameKit
 class ViewController: UIViewController {
     
     
+    /* TO-DO!!
+ 
+    Eliminate duplicate questions in each round.
+    Add sounds
+    Add inputs for # of round questions?
+    Add timer functionality
+     */
+    
+    
     // buttons!
    
     @IBOutlet weak var questionArea: UILabel!
@@ -65,14 +74,13 @@ class ViewController: UIViewController {
 
     }
     
-    func generateRoundQuestions() -> [Question] {
+    func generateRoundQuestions() {
         var i = 0
         
         while i < questionsPerRound {
             i += 1
             roundQuestions.append(allQuestions[GKRandomSource.sharedRandom().nextInt(upperBound: allQuestions.count)])
         }
-        return roundQuestions
     }
     
     // starts round
