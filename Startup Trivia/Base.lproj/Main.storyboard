@@ -33,12 +33,12 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Answer Button 2"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAm-3b-2GF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAm-3b-2GF">
                                 <rect key="frame" x="36" y="368" width="303" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Answer Button 3"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Yg-ISw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Yg-ISw">
                                 <rect key="frame" x="36" y="465" width="303" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Answer Button 4"/>
@@ -66,8 +66,10 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="THu-Yg-ISw" secondAttribute="trailing" constant="20" id="3Na-gh-H9O"/>
                             <constraint firstItem="ZQ9-GC-MVD" firstAttribute="top" secondItem="W8b-FW-B9v" secondAttribute="bottom" constant="67" id="EZJ-5E-iwN"/>
+                            <constraint firstItem="THu-Yg-ISw" firstAttribute="top" secondItem="RAm-3b-2GF" secondAttribute="bottom" constant="67" id="Hby-xT-kuC"/>
                             <constraint firstItem="VHY-mE-pt4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Nnk-yn-iO2"/>
                             <constraint firstItem="9TS-Zs-DGx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="OA3-Gv-urn"/>
+                            <constraint firstItem="RAm-3b-2GF" firstAttribute="top" secondItem="ZQ9-GC-MVD" secondAttribute="bottom" constant="67" id="RBc-RI-XKP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VHY-mE-pt4" secondAttribute="bottom" constant="50" id="S2Q-Xe-BPr"/>
                             <constraint firstItem="W8b-FW-B9v" firstAttribute="top" secondItem="9TS-Zs-DGx" secondAttribute="bottom" constant="99" id="T3S-go-Vd9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VHY-mE-pt4" secondAttribute="trailing" constant="20" id="UtZ-bx-F5W"/>
