@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     var roundQuestions = [Question]()
     var questionIndex = 0
+    var questionsPerRound = 4
+    var score = 0
 
     
     // the data!
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
     func generateRoundQuestions() -> [Question] {
         var i = 0
         
-        while i < 4 {
+        while i < questionsPerRound {
             i += 1
             roundQuestions.append(allQuestions[GKRandomSource.sharedRandom().nextInt(upperBound: allQuestions.count)])
         }
@@ -104,6 +106,7 @@ class ViewController: UIViewController {
         
         if (sender == answerButtonOne && roundQuestions[questionIndex].correctAnswer == 1) || (sender == answerButtonTwo && roundQuestions[questionIndex].correctAnswer == 2) || (sender == answerButtonThree && roundQuestions[questionIndex].correctAnswer == 3) || (sender == answerButtonFour && roundQuestions[questionIndex].correctAnswer == 4) {
             resultArea.text = "Yes yes yes! \(roundQuestions[questionIndex].answers[roundQuestions[questionIndex].correctAnswer]!) is correct!"
+            score += 1
         }
             else {
             resultArea.text = "Nope. Sorry. It's \(roundQuestions[questionIndex].answers[roundQuestions[questionIndex].correctAnswer]!)."
@@ -135,13 +138,19 @@ class ViewController: UIViewController {
 
     }
     
+    // Delayed transitions between questions, and displaying final score
+    
     func loadNextRound() {
         
-        if questionIndex == 4 {
-            print("display score function here")
+        if questionIndex == 3 {
+            displayScore()
+            generateRoundQuestions()
+            questionIndex = 0
+            score = 0
         } else {
-            startRound()
             questionIndex += 1
+            startRound()
+            print(questionIndex)
         }
     }
     
@@ -150,6 +159,29 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: time) {
             self.loadNextRound()
         }
+    }
+    
+    func displayScore() {
+        print(score)
+        switch score {
+        case 0:
+            questionArea.text = "\(score)? That's pretty damn bad."
+        case 1: questionArea.text = "Well, \(score) means you could have technically done worse..."
+        case 2: questionArea.text = "Ok. \(score) is respectable. I guess."
+        case 3: questionArea.text = "Woah. \(score) is an uberdoerpreneuer score."
+        case 4: questionArea.text = "Holy CEO status Batman! \(score) is a grok score."
+        default: break
+        }
+        
+        answerButtonOne.isHidden = true
+        answerButtonTwo.isHidden = true
+        answerButtonThree.isHidden = true
+        answerButtonFour.isHidden = true
+        resultArea.isHidden = true
+        playAgainButton.isHidden = false
+        
+        playAgainButton.setTitle("Again?", for: UIControlState.normal)
+        
     }
 
 }
