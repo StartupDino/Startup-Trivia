@@ -81,6 +81,7 @@ class ViewController: UIViewController {
         answerButtonThree.isHidden = false
         answerButtonFour.isHidden = false
         playAgainButton.isHidden = true
+        resultArea.isHidden = true
         
         answerButtonOne.alpha = 1
         answerButtonTwo.alpha = 1
@@ -130,9 +131,7 @@ class ViewController: UIViewController {
         
         resultArea.isHidden = false
         
-        
-        
-        questionIndex += 1
+        addDelay()
 
     }
     
@@ -142,6 +141,14 @@ class ViewController: UIViewController {
             print("display score function here")
         } else {
             startRound()
+            questionIndex += 1
+        }
+    }
+    
+    func addDelay () {
+        let time = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: time) {
+            self.loadNextRound()
         }
     }
 
