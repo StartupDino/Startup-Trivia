@@ -102,11 +102,9 @@ class ViewController: UIViewController {
         print(questionIndex)
         
         if (sender == answerButtonOne && roundQuestions[questionIndex].correctAnswer == 1) || (sender == answerButtonTwo && roundQuestions[questionIndex].correctAnswer == 2) || (sender == answerButtonThree && roundQuestions[questionIndex].correctAnswer == 3) || (sender == answerButtonFour && roundQuestions[questionIndex].correctAnswer == 4) {
-            print("right")
             resultArea.text = "Yes yes yes! \(roundQuestions[questionIndex].answers[roundQuestions[questionIndex].correctAnswer]!) is correct!"
         }
             else {
-                print("nope")
             resultArea.text = "Nope. Sorry. It's \(roundQuestions[questionIndex].answers[roundQuestions[questionIndex].correctAnswer]!)."
             }
         
@@ -136,6 +134,15 @@ class ViewController: UIViewController {
         
         questionIndex += 1
 
+    }
+    
+    func loadNextRound() {
+        
+        if questionIndex == 4 {
+            print("display score function here")
+        } else {
+            startRound()
+        }
     }
 
 }
