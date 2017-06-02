@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     // buttons!
    
     @IBOutlet weak var questionArea: UILabel!
+    @IBOutlet weak var resultArea: UILabel!
     @IBOutlet weak var answerButtonOne: UIButton!
     @IBOutlet weak var answerButtonTwo: UIButton!
     @IBOutlet weak var answerButtonThree: UIButton!
@@ -56,6 +57,7 @@ class ViewController: UIViewController {
         answerButtonTwo.isHidden = true
         answerButtonThree.isHidden = true
         answerButtonFour.isHidden = true
+        resultArea.isHidden = true
         questionArea.text = "Are you a triviapreneur? Time to find out."
         generateRoundQuestions()
 
@@ -101,9 +103,11 @@ class ViewController: UIViewController {
         
         if (sender == answerButtonOne && roundQuestions[questionIndex].correctAnswer == 1) || (sender == answerButtonTwo && roundQuestions[questionIndex].correctAnswer == 2) || (sender == answerButtonThree && roundQuestions[questionIndex].correctAnswer == 3) || (sender == answerButtonFour && roundQuestions[questionIndex].correctAnswer == 4) {
             print("right")
+            resultArea.text = "Yes yes yes! \(roundQuestions[questionIndex].answers[roundQuestions[questionIndex].correctAnswer]!) is correct!"
         }
             else {
                 print("nope")
+            resultArea.text = "Nope. Sorry. It's \(roundQuestions[questionIndex].answers[roundQuestions[questionIndex].correctAnswer]!)."
             }
         
         // dimming incorrect answers
@@ -112,7 +116,23 @@ class ViewController: UIViewController {
             answerButtonTwo.alpha = 0.3
             answerButtonThree.alpha = 0.3
             answerButtonFour.alpha = 0.3
+        } else if roundQuestions[questionIndex].correctAnswer == 2 {
+            answerButtonOne.alpha = 0.3
+            answerButtonThree.alpha = 0.3
+            answerButtonFour.alpha = 0.3
+        } else if roundQuestions[questionIndex].correctAnswer == 3 {
+            answerButtonOne.alpha = 0.3
+            answerButtonTwo.alpha = 0.3
+            answerButtonFour.alpha = 0.3
+        } else if roundQuestions[questionIndex].correctAnswer == 4 {
+            answerButtonOne.alpha = 0.3
+            answerButtonTwo.alpha = 0.3
+            answerButtonThree.alpha = 0.3
         }
+        
+        resultArea.isHidden = false
+        
+        
         
         questionIndex += 1
 
