@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     // the variables!
     
     var roundQuestions = [Question]()
+    var questionIndex = 0
 
     
     // the data!
@@ -79,16 +80,42 @@ class ViewController: UIViewController {
         answerButtonFour.isHidden = false
         playAgainButton.isHidden = true
         
+        answerButtonOne.alpha = 1
+        answerButtonTwo.alpha = 1
+        answerButtonThree.alpha = 1
+        answerButtonFour.alpha = 1
+
+        
         print(roundQuestions)
         
-        questionArea.text = roundQuestions[0].question
-        answerButtonOne.setTitle(roundQuestions[0].answers[1], for: UIControlState.normal)
-        answerButtonTwo.setTitle(roundQuestions[0].answers[2], for: UIControlState.normal)
-        answerButtonThree.setTitle(roundQuestions[0].answers[3], for: UIControlState.normal)
-        answerButtonFour.setTitle(roundQuestions[0].answers[4], for: UIControlState.normal)
+        questionArea.text = roundQuestions[questionIndex].question
+        answerButtonOne.setTitle(roundQuestions[questionIndex].answers[1], for: UIControlState.normal)
+        answerButtonTwo.setTitle(roundQuestions[questionIndex].answers[2], for: UIControlState.normal)
+        answerButtonThree.setTitle(roundQuestions[questionIndex].answers[3], for: UIControlState.normal)
+        answerButtonFour.setTitle(roundQuestions[questionIndex].answers[4], for: UIControlState.normal)
+    }
+    
+    
+    @IBAction func checkAnswer(_ sender: UIButton) {
+        print(questionIndex)
         
+        if (sender == answerButtonOne && roundQuestions[questionIndex].correctAnswer == 1) || (sender == answerButtonTwo && roundQuestions[questionIndex].correctAnswer == 2) || (sender == answerButtonThree && roundQuestions[questionIndex].correctAnswer == 3) || (sender == answerButtonFour && roundQuestions[questionIndex].correctAnswer == 4) {
+            print("right")
+        }
+            else {
+                print("nope")
+            }
         
+        // dimming incorrect answers
         
+        if roundQuestions[questionIndex].correctAnswer == 1 {
+            answerButtonTwo.alpha = 0.3
+            answerButtonThree.alpha = 0.3
+            answerButtonFour.alpha = 0.3
+        }
+        
+        questionIndex += 1
+
     }
 
 }
