@@ -13,6 +13,7 @@
 		477F68E31EDF563C00663340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477F68E21EDF563C00663340 /* Assets.xcassets */; };
 		477F68E61EDF563C00663340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477F68E41EDF563C00663340 /* LaunchScreen.storyboard */; };
 		477F68EE1EDF570E00663340 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477F68ED1EDF570E00663340 /* Questions.swift */; };
+		47BDE2191EE1C978002BBC89 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47BDE2181EE1C978002BBC89 /* Orbitron-Regular.ttf */; };
 		47EB25571EE1BFEE00E81C72 /* TriviaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB25561EE1BFEE00E81C72 /* TriviaData.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		477F68E51EDF563C00663340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		477F68E71EDF563C00663340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		477F68ED1EDF570E00663340 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		47BDE2181EE1C978002BBC89 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
 		47EB25561EE1BFEE00E81C72 /* TriviaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,11 +62,12 @@
 			children = (
 				477F68DB1EDF563C00663340 /* AppDelegate.swift */,
 				477F68DD1EDF563C00663340 /* ViewController.swift */,
+				477F68ED1EDF570E00663340 /* Questions.swift */,
 				477F68DF1EDF563C00663340 /* Main.storyboard */,
 				477F68E21EDF563C00663340 /* Assets.xcassets */,
 				477F68E41EDF563C00663340 /* LaunchScreen.storyboard */,
 				477F68E71EDF563C00663340 /* Info.plist */,
-				477F68ED1EDF570E00663340 /* Questions.swift */,
+				47BDE2181EE1C978002BBC89 /* Orbitron-Regular.ttf */,
 				47EB25561EE1BFEE00E81C72 /* TriviaData.swift */,
 			);
 			path = "Startup Trivia";
@@ -132,6 +135,7 @@
 			files = (
 				477F68E61EDF563C00663340 /* LaunchScreen.storyboard in Resources */,
 				477F68E31EDF563C00663340 /* Assets.xcassets in Resources */,
+				47BDE2191EE1C978002BBC89 /* Orbitron-Regular.ttf in Resources */,
 				477F68E11EDF563C00663340 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

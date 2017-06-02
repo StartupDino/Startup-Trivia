@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,46 +22,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-Zs-DGx">
-                                <rect key="frame" x="16" y="79" width="343" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question area" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-Zs-DGx">
+                                <rect key="frame" x="36" y="55" width="303" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8b-FW-B9v">
-                                <rect key="frame" x="16" y="212" width="343" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ9-GC-MVD">
+                                <rect key="frame" x="36" y="271" width="303" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Answer Button 2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAm-3b-2GF">
+                                <rect key="frame" x="36" y="368" width="303" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Answer Button 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Yg-ISw">
+                                <rect key="frame" x="36" y="465" width="303" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Answer Button 4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8b-FW-B9v">
+                                <rect key="frame" x="36" y="174" width="303" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Answer Button 1"/>
                                 <connections>
                                     <action selector="answerButtonOne" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIQ-dm-xiq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ9-GC-MVD">
-                                <rect key="frame" x="16" y="303" width="343" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Answer Button 2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAm-3b-2GF">
-                                <rect key="frame" x="16" y="391" width="343" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Answer Button 3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Yg-ISw">
-                                <rect key="frame" x="16" y="474" width="343" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Answer Button 4"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHY-mE-pt4">
-                                <rect key="frame" x="16" y="567" width="343" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHY-mE-pt4">
+                                <rect key="frame" x="36" y="581" width="303" height="36"/>
+                                <color key="backgroundColor" red="0.29411764705882354" green="0.75294117647058822" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="tintColor" red="0.29411764709999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Start a round!"/>
                                 <connections>
                                     <action selector="startRound" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPE-Sc-1zn"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.29411764705882354" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="THu-Yg-ISw" secondAttribute="trailing" constant="20" id="3Na-gh-H9O"/>
+                            <constraint firstItem="ZQ9-GC-MVD" firstAttribute="top" secondItem="W8b-FW-B9v" secondAttribute="bottom" constant="67" id="EZJ-5E-iwN"/>
+                            <constraint firstItem="VHY-mE-pt4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Nnk-yn-iO2"/>
+                            <constraint firstItem="9TS-Zs-DGx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="OA3-Gv-urn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VHY-mE-pt4" secondAttribute="bottom" constant="50" id="S2Q-Xe-BPr"/>
+                            <constraint firstItem="W8b-FW-B9v" firstAttribute="top" secondItem="9TS-Zs-DGx" secondAttribute="bottom" constant="99" id="T3S-go-Vd9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VHY-mE-pt4" secondAttribute="trailing" constant="20" id="UtZ-bx-F5W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W8b-FW-B9v" secondAttribute="trailing" constant="20" id="WW6-4W-7fb"/>
+                            <constraint firstItem="9TS-Zs-DGx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Weo-Us-OFQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZQ9-GC-MVD" secondAttribute="trailing" constant="20" id="X8I-Ai-mAk"/>
+                            <constraint firstItem="ZQ9-GC-MVD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="aML-lP-zf1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RAm-3b-2GF" secondAttribute="trailing" constant="20" id="aRQ-Ev-sAe"/>
+                            <constraint firstItem="THu-Yg-ISw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="cQw-eK-H0Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9TS-Zs-DGx" secondAttribute="trailing" constant="20" id="fBY-xR-fAn"/>
+                            <constraint firstItem="RAm-3b-2GF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="vKG-47-9hU"/>
+                            <constraint firstItem="W8b-FW-B9v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="zTM-op-Xd5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="answerButtonFour" destination="THu-Yg-ISw" id="X4f-42-Z2D"/>

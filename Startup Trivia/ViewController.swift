@@ -21,6 +21,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerButtonFour: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
     
+    // the variables!
+    
+    var roundQuestions = [Question]()
+
+    
     // the data!
     
     let allQuestions: [Question] = [
@@ -28,13 +33,14 @@ class ViewController: UIViewController {
         Question(question: "Elon Musk is from...", answers: [1: "South Africa", 2: "Hungary", 3: "The U.S.", 4: "Denmark"], correctAnswer: 1),
         Question(question: "Which of the following was NOT a founder of PayPal?", answers: [1: "Ken Howery", 2: "Elon Musk", 3: "Peter Thiel", 4: "Reid Hoffman"], correctAnswer: 4),
         Question(question: "What was the name of Tim Ferriss' first company that originally went on to inspire 'The Four Hour Work Week?'", answers: [1: "Uber", 2: "Drug Dealing for Fun And Profit", 3: "BrainQUICKEN", 4: "MetaBrain"], correctAnswer: 3),
-        Question(question: "Shopify HQ are in what city?", answers: [1: "San Francisco", 2: "Los Angeles", 3: "Ottowa", 4: "Toronto"], correctAnswer: 3)
+        Question(question: "The Shopify HQ's are located in what city?", answers: [1: "San Francisco", 2: "Los Angeles", 3: "Ottowa", 4: "Toronto"], correctAnswer: 3)
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         primeTheApp()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +48,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // sets up the welcome screen
+    // sets up the welcome screen and choose 4 random questions
     
     func primeTheApp() {
         answerButtonOne.isHidden = true
@@ -50,12 +56,11 @@ class ViewController: UIViewController {
         answerButtonThree.isHidden = true
         answerButtonFour.isHidden = true
         questionArea.text = "Are you a triviapreneur? Time to find out."
+        generateRoundQuestions()
+
     }
     
-    // run the questions
-    
     func generateRoundQuestions() -> [Question] {
-        var roundQuestions = [Question]()
         var i = 0
         
         while i < 4 {
@@ -64,6 +69,8 @@ class ViewController: UIViewController {
         }
         return roundQuestions
     }
+    
+    // starts round
 
     @IBAction func startRound() {
         answerButtonOne.isHidden = false
@@ -72,7 +79,14 @@ class ViewController: UIViewController {
         answerButtonFour.isHidden = false
         playAgainButton.isHidden = true
         
-        generateRoundQuestions() // gotta change this!
+        print(roundQuestions)
+        
+        questionArea.text = roundQuestions[0].question
+        answerButtonOne.setTitle(roundQuestions[0].answers[1], for: UIControlState.normal)
+        answerButtonTwo.setTitle(roundQuestions[0].answers[2], for: UIControlState.normal)
+        answerButtonThree.setTitle(roundQuestions[0].answers[3], for: UIControlState.normal)
+        answerButtonFour.setTitle(roundQuestions[0].answers[4], for: UIControlState.normal)
+        
         
         
     }
