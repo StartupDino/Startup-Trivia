@@ -13,6 +13,7 @@
 		477F68E31EDF563C00663340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477F68E21EDF563C00663340 /* Assets.xcassets */; };
 		477F68E61EDF563C00663340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477F68E41EDF563C00663340 /* LaunchScreen.storyboard */; };
 		477F68EE1EDF570E00663340 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477F68ED1EDF570E00663340 /* Questions.swift */; };
+		47EB25571EE1BFEE00E81C72 /* TriviaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB25561EE1BFEE00E81C72 /* TriviaData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		477F68E51EDF563C00663340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		477F68E71EDF563C00663340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		477F68ED1EDF570E00663340 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		47EB25561EE1BFEE00E81C72 /* TriviaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				477F68E41EDF563C00663340 /* LaunchScreen.storyboard */,
 				477F68E71EDF563C00663340 /* Info.plist */,
 				477F68ED1EDF570E00663340 /* Questions.swift */,
+				47EB25561EE1BFEE00E81C72 /* TriviaData.swift */,
 			);
 			path = "Startup Trivia";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47EB25571EE1BFEE00E81C72 /* TriviaData.swift in Sources */,
 				477F68EE1EDF570E00663340 /* Questions.swift in Sources */,
 				477F68DE1EDF563C00663340 /* ViewController.swift in Sources */,
 				477F68DC1EDF563C00663340 /* AppDelegate.swift in Sources */,
