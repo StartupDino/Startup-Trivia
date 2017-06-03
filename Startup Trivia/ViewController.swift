@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     /* TO-DO!!
  
-    Eliminate duplicate questions in each round.
     Add sounds
     Add inputs for # of round questions?
     Add timer functionality
@@ -33,9 +32,10 @@ class ViewController: UIViewController {
     
     // the variables!
     
-    var roundQuestions = [Question]()
+    var roundQuestions = [Int]()
     var questionIndex = 0
     var questionsPerRound = 4
+    var questionsAsked = 0
     var score = 0
 
     
@@ -77,9 +77,9 @@ class ViewController: UIViewController {
     func generateRoundQuestions() {
         var i = 0
         
-        while i < questionsPerRound {
+        while i < allQuestions.count {
+            roundQuestions.append(i)
             i += 1
-            roundQuestions.append(allQuestions[GKRandomSource.sharedRandom().nextInt(upperBound: allQuestions.count)])
         }
     }
     
@@ -100,41 +100,50 @@ class ViewController: UIViewController {
 
         
         print(roundQuestions)
+
+        questionIndex = roundQuestions.remove(at: GKRandomSource.sharedRandom().nextInt(upperBound: roundQuestions.count))
         
-        questionArea.text = roundQuestions[questionIndex].question
-        answerButtonOne.setTitle(roundQuestions[questionIndex].answers[1], for: UIControlState.normal)
-        answerButtonTwo.setTitle(roundQuestions[questionIndex].answers[2], for: UIControlState.normal)
-        answerButtonThree.setTitle(roundQuestions[questionIndex].answers[3], for: UIControlState.normal)
-        answerButtonFour.setTitle(roundQuestions[questionIndex].answers[4], for: UIControlState.normal)
+        print(roundQuestions)
+        print(questionIndex)
+        print(questionsAsked)
+        
+        questionArea.text = allQuestions[questionIndex].question
+        answerButtonOne.setTitle(allQuestions[questionIndex].answers[1], for: UIControlState.normal)
+        answerButtonTwo.setTitle(allQuestions[questionIndex].answers[2], for: UIControlState.normal)
+        answerButtonThree.setTitle(allQuestions[questionIndex].answers[3], for: UIControlState.normal)
+        answerButtonFour.setTitle(allQuestions[questionIndex].answers[4], for: UIControlState.normal)
     }
     
     
     @IBAction func checkAnswer(_ sender: UIButton) {
-        print(questionIndex)
+        questionsAsked += 1
+        print(questionsAsked)
         
-        if (sender == answerButtonOne && roundQuestions[questionIndex].correctAnswer == 1) || (sender == answerButtonTwo && roundQuestions[questionIndex].correctAnswer == 2) || (sender == answerButtonThree && roundQuestions[questionIndex].correctAnswer == 3) || (sender == answerButtonFour && roundQuestions[questionIndex].correctAnswer == 4) {
-            resultArea.text = "Yes yes yes! \(roundQuestions[questionIndex].answers[roundQuestions[questionIndex].correctAnswer]!) is correct!"
+        let answer = allQuestions[questionIndex].correctAnswer
+        
+        if (sender == answerButtonOne && answer == 1) || (sender == answerButtonTwo && answer == 2) || (sender == answerButtonThree && answer == 3) || (sender == answerButtonFour && answer == 4) {
+            resultArea.text = "Yes yes yes! \(allQuestions[questionIndex].answers[answer]!) is correct!"
             score += 1
         }
             else {
-            resultArea.text = "Nope. Sorry. It's \(roundQuestions[questionIndex].answers[roundQuestions[questionIndex].correctAnswer]!)."
+            resultArea.text = "Nope. Sorry. It's \(allQuestions[questionIndex].answers[answer]!)."
             }
         
         // dimming incorrect answers
         
-        if roundQuestions[questionIndex].correctAnswer == 1 {
+        if allQuestions[questionIndex].correctAnswer == 1 {
             answerButtonTwo.alpha = 0.3
             answerButtonThree.alpha = 0.3
             answerButtonFour.alpha = 0.3
-        } else if roundQuestions[questionIndex].correctAnswer == 2 {
+        } else if allQuestions[questionIndex].correctAnswer == 2 {
             answerButtonOne.alpha = 0.3
             answerButtonThree.alpha = 0.3
             answerButtonFour.alpha = 0.3
-        } else if roundQuestions[questionIndex].correctAnswer == 3 {
+        } else if allQuestions[questionIndex].correctAnswer == 3 {
             answerButtonOne.alpha = 0.3
             answerButtonTwo.alpha = 0.3
             answerButtonFour.alpha = 0.3
-        } else if roundQuestions[questionIndex].correctAnswer == 4 {
+        } else if allQuestions[questionIndex].correctAnswer == 4 {
             answerButtonOne.alpha = 0.3
             answerButtonTwo.alpha = 0.3
             answerButtonThree.alpha = 0.3
@@ -150,15 +159,10 @@ class ViewController: UIViewController {
     
     func loadNextRound() {
         
-        if questionIndex == 3 {
+        if questionsAsked == 4 {
             displayScore()
-            generateRoundQuestions()
-            questionIndex = 0
-            score = 0
         } else {
-            questionIndex += 1
             startRound()
-            print(questionIndex)
         }
     }
     
@@ -170,7 +174,9 @@ class ViewController: UIViewController {
     }
     
     func displayScore() {
-        print(score)
+        score = 0
+        questionsAsked = 0
+        
         switch score {
         case 0:
             questionArea.text = "\(score)? That's pretty damn bad."
@@ -180,6 +186,9 @@ class ViewController: UIViewController {
         case 4: questionArea.text = "Holy CEO status Batman! \(score) is a grok score."
         default: break
         }
+        
+        questionIndex = roundQuestions.remove(at: GKRandomSource.sharedRandom().nextInt(upperBound: roundQuestions.count))
+        generateRoundQuestions()
         
         answerButtonOne.isHidden = true
         answerButtonTwo.isHidden = true
@@ -191,6 +200,5 @@ class ViewController: UIViewController {
         playAgainButton.setTitle("Again?", for: UIControlState.normal)
         
     }
-
 }
 
