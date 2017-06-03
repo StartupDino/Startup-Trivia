@@ -14,14 +14,4 @@ struct Question {
     let question: String
     let answers: [Int: String]
     let correctAnswer: Int
-
-
-    
-//    func returnQuestion() -> String {
-//        return question
-//    }
-//    
-//    func returnAnswerNum() -> Int {
-//        return correctAnswer
-//    }
 }

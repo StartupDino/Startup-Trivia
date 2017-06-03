@@ -200,5 +200,11 @@ class ViewController: UIViewController {
         playAgainButton.setTitle("Again?", for: UIControlState.normal)
         
     }
+    
+    // loading sound effects
+    
+    func loadSounds() {
+        <#function body#>
+    }
 }
 

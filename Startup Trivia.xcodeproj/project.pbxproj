@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4733D7651EE346A00070D39A /* game sound no.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4733D7631EE346A00070D39A /* game sound no.wav */; };
+		4733D7661EE346A00070D39A /* game sound yes.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4733D7641EE346A00070D39A /* game sound yes.wav */; };
 		477F68DC1EDF563C00663340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477F68DB1EDF563C00663340 /* AppDelegate.swift */; };
 		477F68DE1EDF563C00663340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477F68DD1EDF563C00663340 /* ViewController.swift */; };
 		477F68E11EDF563C00663340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477F68DF1EDF563C00663340 /* Main.storyboard */; };
@@ -14,10 +16,11 @@
 		477F68E61EDF563C00663340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477F68E41EDF563C00663340 /* LaunchScreen.storyboard */; };
 		477F68EE1EDF570E00663340 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477F68ED1EDF570E00663340 /* Questions.swift */; };
 		47BDE2191EE1C978002BBC89 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47BDE2181EE1C978002BBC89 /* Orbitron-Regular.ttf */; };
-		47EB25571EE1BFEE00E81C72 /* TriviaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB25561EE1BFEE00E81C72 /* TriviaData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4733D7631EE346A00070D39A /* game sound no.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "game sound no.wav"; sourceTree = "<group>"; };
+		4733D7641EE346A00070D39A /* game sound yes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "game sound yes.wav"; sourceTree = "<group>"; };
 		477F68D81EDF563C00663340 /* Startup Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Startup Trivia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		477F68DB1EDF563C00663340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		477F68DD1EDF563C00663340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +30,6 @@
 		477F68E71EDF563C00663340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		477F68ED1EDF570E00663340 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		47BDE2181EE1C978002BBC89 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
-		47EB25561EE1BFEE00E81C72 /* TriviaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,8 @@
 				477F68E41EDF563C00663340 /* LaunchScreen.storyboard */,
 				477F68E71EDF563C00663340 /* Info.plist */,
 				47BDE2181EE1C978002BBC89 /* Orbitron-Regular.ttf */,
-				47EB25561EE1BFEE00E81C72 /* TriviaData.swift */,
+				4733D7631EE346A00070D39A /* game sound no.wav */,
+				4733D7641EE346A00070D39A /* game sound yes.wav */,
 			);
 			path = "Startup Trivia";
 			sourceTree = "<group>";
@@ -135,6 +138,8 @@
 			files = (
 				477F68E61EDF563C00663340 /* LaunchScreen.storyboard in Resources */,
 				477F68E31EDF563C00663340 /* Assets.xcassets in Resources */,
+				4733D7661EE346A00070D39A /* game sound yes.wav in Resources */,
+				4733D7651EE346A00070D39A /* game sound no.wav in Resources */,
 				47BDE2191EE1C978002BBC89 /* Orbitron-Regular.ttf in Resources */,
 				477F68E11EDF563C00663340 /* Main.storyboard in Resources */,
 			);
@@ -147,7 +152,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47EB25571EE1BFEE00E81C72 /* TriviaData.swift in Sources */,
 				477F68EE1EDF570E00663340 /* Questions.swift in Sources */,
 				477F68DE1EDF563C00663340 /* ViewController.swift in Sources */,
 				477F68DC1EDF563C00663340 /* AppDelegate.swift in Sources */,
