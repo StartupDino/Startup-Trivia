@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4733D7651EE346A00070D39A /* game sound no.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4733D7631EE346A00070D39A /* game sound no.wav */; };
-		4733D7661EE346A00070D39A /* game sound yes.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4733D7641EE346A00070D39A /* game sound yes.wav */; };
+		4733D7681EE348EE0070D39A /* GameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4733D7671EE348EE0070D39A /* GameSound.wav */; };
 		477F68DC1EDF563C00663340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477F68DB1EDF563C00663340 /* AppDelegate.swift */; };
 		477F68DE1EDF563C00663340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477F68DD1EDF563C00663340 /* ViewController.swift */; };
 		477F68E11EDF563C00663340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477F68DF1EDF563C00663340 /* Main.storyboard */; };
@@ -19,8 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4733D7631EE346A00070D39A /* game sound no.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "game sound no.wav"; sourceTree = "<group>"; };
-		4733D7641EE346A00070D39A /* game sound yes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "game sound yes.wav"; sourceTree = "<group>"; };
+		4733D7671EE348EE0070D39A /* GameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameSound.wav; sourceTree = "<group>"; };
 		477F68D81EDF563C00663340 /* Startup Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Startup Trivia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		477F68DB1EDF563C00663340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		477F68DD1EDF563C00663340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,9 +67,8 @@
 				477F68E21EDF563C00663340 /* Assets.xcassets */,
 				477F68E41EDF563C00663340 /* LaunchScreen.storyboard */,
 				477F68E71EDF563C00663340 /* Info.plist */,
+				4733D7671EE348EE0070D39A /* GameSound.wav */,
 				47BDE2181EE1C978002BBC89 /* Orbitron-Regular.ttf */,
-				4733D7631EE346A00070D39A /* game sound no.wav */,
-				4733D7641EE346A00070D39A /* game sound yes.wav */,
 			);
 			path = "Startup Trivia";
 			sourceTree = "<group>";
@@ -138,10 +135,9 @@
 			files = (
 				477F68E61EDF563C00663340 /* LaunchScreen.storyboard in Resources */,
 				477F68E31EDF563C00663340 /* Assets.xcassets in Resources */,
-				4733D7661EE346A00070D39A /* game sound yes.wav in Resources */,
-				4733D7651EE346A00070D39A /* game sound no.wav in Resources */,
 				47BDE2191EE1C978002BBC89 /* Orbitron-Regular.ttf in Resources */,
 				477F68E11EDF563C00663340 /* Main.storyboard in Resources */,
+				4733D7681EE348EE0070D39A /* GameSound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

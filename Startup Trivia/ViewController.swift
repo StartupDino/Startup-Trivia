@@ -203,8 +203,14 @@ class ViewController: UIViewController {
     
     // loading sound effects
     
-    func loadSounds() {
-        <#function body#>
+    func loadGameStartSound() {
+        let pathToSoundFile = Bundle.main.path(forResource: "GameSound", ofType: "wav")
+        let soundURL = URL(fileURLWithPath: pathToSoundFile!)
+        AudioServicesCreateSystemSoundID(soundURL as CFURL, &gameSound)
+    }
+    
+    func playGameStartSound() {
+        AudioServicesPlaySystemSound(gameSound)
     }
 }
 
