@@ -11,16 +11,7 @@ import GameKit
 
 class ViewController: UIViewController {
     
-    
-    /* TO-DO!!
- 
-    Add sounds
-    Add inputs for # of round questions?
-    Add timer functionality
-     */
-    
-    
-    // buttons!
+    // the buttons & labels!
    
     @IBOutlet weak var questionArea: UILabel!
     @IBOutlet weak var resultArea: UILabel!
@@ -39,8 +30,6 @@ class ViewController: UIViewController {
     var score = 0
     var gameSound: SystemSoundID = 0
 
-
-    
     // the data!
     
     let allQuestions: [Question] = [
@@ -58,7 +47,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         primeTheApp()
         playGameStartSound()    
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,9 +76,20 @@ class ViewController: UIViewController {
         }
     }
     
-    // starts round
+    // starts round and asks a question from the generated index.
 
     @IBAction func startRound() {
+        
+        // chooses a question index # and temporarily removes it from the question index.
+       
+        questionIndex = roundQuestions.remove(at: GKRandomSource.sharedRandom().nextInt(upperBound: roundQuestions.count))
+     
+        questionArea.text = allQuestions[questionIndex].question
+        answerButtonOne.setTitle(allQuestions[questionIndex].answers[1], for: UIControlState.normal)
+        answerButtonTwo.setTitle(allQuestions[questionIndex].answers[2], for: UIControlState.normal)
+        answerButtonThree.setTitle(allQuestions[questionIndex].answers[3], for: UIControlState.normal)
+        answerButtonFour.setTitle(allQuestions[questionIndex].answers[4], for: UIControlState.normal)
+        
         answerButtonOne.isHidden = false
         answerButtonTwo.isHidden = false
         answerButtonThree.isHidden = false
@@ -102,23 +101,7 @@ class ViewController: UIViewController {
         answerButtonTwo.alpha = 1
         answerButtonThree.alpha = 1
         answerButtonFour.alpha = 1
-
-        
-        print(roundQuestions)
-
-        questionIndex = roundQuestions.remove(at: GKRandomSource.sharedRandom().nextInt(upperBound: roundQuestions.count))
-        
-        print(roundQuestions)
-        print(questionIndex)
-        print(questionsAsked)
-        
-        questionArea.text = allQuestions[questionIndex].question
-        answerButtonOne.setTitle(allQuestions[questionIndex].answers[1], for: UIControlState.normal)
-        answerButtonTwo.setTitle(allQuestions[questionIndex].answers[2], for: UIControlState.normal)
-        answerButtonThree.setTitle(allQuestions[questionIndex].answers[3], for: UIControlState.normal)
-        answerButtonFour.setTitle(allQuestions[questionIndex].answers[4], for: UIControlState.normal)
     }
-    
     
     @IBAction func checkAnswer(_ sender: UIButton) {
         questionsAsked += 1
@@ -160,7 +143,7 @@ class ViewController: UIViewController {
 
     }
     
-    // Delayed transitions between questions, and displaying final score
+    // Delayed transitions between questions
     
     func loadNextRound() {
         
@@ -178,9 +161,9 @@ class ViewController: UIViewController {
         }
     }
     
+    // Displays final score and resets score, index, etc.
+    
     func displayScore() {
-        score = 0
-        questionsAsked = 0
         
         switch score {
         case 0:
@@ -204,6 +187,8 @@ class ViewController: UIViewController {
         
         playAgainButton.setTitle("Again?", for: UIControlState.normal)
         
+        score = 0
+        questionsAsked = 0
     }
     
     // loading sound effects

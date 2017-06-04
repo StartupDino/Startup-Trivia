@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import GameKit
 
 struct Question {
     
