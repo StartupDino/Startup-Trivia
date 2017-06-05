@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHY-mE-pt4">
-                                <rect key="frame" x="40" y="855" width="688" height="149"/>
+                                <rect key="frame" x="36" y="563.5" width="303" height="83.5"/>
                                 <color key="backgroundColor" red="0.29411764705882354" green="0.75294117647058822" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="tintColor" red="0.29411764709999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ9-GC-MVD">
-                                <rect key="frame" x="40" y="458.5" width="688" height="104"/>
+                                <rect key="frame" x="36" y="313.5" width="303" height="55.5"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Answer Button 2"/>
                                 <connections>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAm-3b-2GF">
-                                <rect key="frame" x="40" y="602.5" width="688" height="104"/>
+                                <rect key="frame" x="36" y="409" width="303" height="55"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Answer Button 3"/>
                                 <connections>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Yg-ISw">
-                                <rect key="frame" x="40" y="747.5" width="688" height="103.5"/>
+                                <rect key="frame" x="36" y="505" width="303" height="54.5"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Answer Button 4"/>
                                 <connections>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8b-FW-B9v">
-                                <rect key="frame" x="40" y="313.5" width="688" height="104"/>
+                                <rect key="frame" x="36" y="217.5" width="303" height="55"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Answer Button 1"/>
                                 <connections>
@@ -67,13 +67,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Area this is where the answer go" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5F-Kf-3m5">
-                                <rect key="frame" x="40" y="189" width="688" height="103.5"/>
+                                <rect key="frame" x="36" y="132" width="303" height="64.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-Zs-DGx">
-                                <rect key="frame" x="40" y="25" width="688" height="149"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-Zs-DGx">
+                                <rect key="frame" x="36" y="25" width="303" height="92"/>
                                 <string key="text">This is the huge question area with lots and lots and lots of different text that hopefully won't be cut short....really really short like woot!</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,13 +83,13 @@
                         <color key="backgroundColor" red="0.29411764705882354" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9TS-Zs-DGx" firstAttribute="leading" secondItem="d5F-Kf-3m5" secondAttribute="leading" id="0mQ-Wv-eh3"/>
-                            <constraint firstItem="THu-Yg-ISw" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.7" id="2UC-xF-wzh"/>
+                            <constraint firstItem="THu-Yg-ISw" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.6" id="2UC-xF-wzh"/>
                             <constraint firstItem="VHY-mE-pt4" firstAttribute="top" secondItem="THu-Yg-ISw" secondAttribute="bottom" constant="4" id="2zt-zX-wkC"/>
                             <constraint firstItem="W8b-FW-B9v" firstAttribute="trailing" secondItem="ZQ9-GC-MVD" secondAttribute="trailing" id="72H-RG-v9b"/>
                             <constraint firstItem="d5F-Kf-3m5" firstAttribute="trailing" secondItem="W8b-FW-B9v" secondAttribute="trailing" id="7BW-Up-33M"/>
                             <constraint firstItem="THu-Yg-ISw" firstAttribute="trailing" secondItem="VHY-mE-pt4" secondAttribute="trailing" id="7XF-xD-wjR"/>
                             <constraint firstItem="ZQ9-GC-MVD" firstAttribute="top" secondItem="W8b-FW-B9v" secondAttribute="bottom" constant="41" id="9La-t0-vSR"/>
-                            <constraint firstItem="ZQ9-GC-MVD" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.7" id="9N8-6o-tnP"/>
+                            <constraint firstItem="ZQ9-GC-MVD" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.6" id="9N8-6o-tnP"/>
                             <constraint firstItem="RAm-3b-2GF" firstAttribute="top" secondItem="ZQ9-GC-MVD" secondAttribute="bottom" constant="40" id="9q2-0e-fki"/>
                             <constraint firstItem="W8b-FW-B9v" firstAttribute="top" secondItem="d5F-Kf-3m5" secondAttribute="bottom" constant="21" id="BL7-gq-Hor"/>
                             <constraint firstItem="9TS-Zs-DGx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="DRj-Bn-kNm"/>
@@ -98,14 +98,14 @@
                             <constraint firstItem="THu-Yg-ISw" firstAttribute="top" secondItem="RAm-3b-2GF" secondAttribute="bottom" constant="41" id="JxZ-xF-W7J"/>
                             <constraint firstItem="9TS-Zs-DGx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="PSo-TS-DND"/>
                             <constraint firstItem="ZQ9-GC-MVD" firstAttribute="leading" secondItem="RAm-3b-2GF" secondAttribute="leading" id="Qix-yO-lFK"/>
-                            <constraint firstItem="W8b-FW-B9v" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.7" id="WjD-Lz-eOt"/>
+                            <constraint firstItem="W8b-FW-B9v" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.6" id="WjD-Lz-eOt"/>
                             <constraint firstItem="THu-Yg-ISw" firstAttribute="leading" secondItem="VHY-mE-pt4" secondAttribute="leading" id="adw-q2-FeL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VHY-mE-pt4" secondAttribute="bottom" constant="20" id="bIg-Ug-BAj"/>
                             <constraint firstItem="d5F-Kf-3m5" firstAttribute="top" secondItem="9TS-Zs-DGx" secondAttribute="bottom" constant="15" id="bOY-S0-nGF"/>
-                            <constraint firstItem="VHY-mE-pt4" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" id="cOY-fL-LoO"/>
+                            <constraint firstItem="VHY-mE-pt4" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.9" id="cOY-fL-LoO"/>
                             <constraint firstItem="RAm-3b-2GF" firstAttribute="leading" secondItem="THu-Yg-ISw" secondAttribute="leading" id="iWF-P9-DJp"/>
                             <constraint firstItem="9TS-Zs-DGx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="imC-1P-V6D"/>
-                            <constraint firstItem="RAm-3b-2GF" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.7" id="m6E-2o-Sb0"/>
+                            <constraint firstItem="RAm-3b-2GF" firstAttribute="height" secondItem="9TS-Zs-DGx" secondAttribute="height" multiplier="0.6" id="m6E-2o-Sb0"/>
                             <constraint firstItem="RAm-3b-2GF" firstAttribute="trailing" secondItem="THu-Yg-ISw" secondAttribute="trailing" id="qZN-Hg-QQP"/>
                             <constraint firstItem="d5F-Kf-3m5" firstAttribute="leading" secondItem="W8b-FW-B9v" secondAttribute="leading" id="rYS-Vu-Bmx"/>
                             <constraint firstItem="9TS-Zs-DGx" firstAttribute="trailing" secondItem="d5F-Kf-3m5" secondAttribute="trailing" id="tOt-91-nsK"/>
